@@ -1,4 +1,4 @@
 library(testthat)
-library(reporttb)
+library(msis)
 
-test_check("reporttb")
+test_check("msis")
