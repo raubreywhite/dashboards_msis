@@ -7,6 +7,8 @@ before_install:
 - bash make.sh
 after_success:
 - Rscript -e 'library(covr); codecov()'
-- test $TRAVIS_PULL_REQUEST == "false" && 
-  test $TRAVIS_BRANCH == "master" && 
-  bash deploy.sh
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
+  deploy.sh
+env:
+  global:
+    secure: DPlrVRB3hTR88EUgteoRZiBoOxGoQX29/0PbxZuo9z5RBUqnk/2oxKuZI3c8Y0+QcPIz87uSfrj6wwynFXGzyUPd/TT4Hh5uOp9TXVsLahnX2gNjvdfBqm25NbL8w7I10TXi3HuHZJg7KFKbsVmjYHQTkPp16LCH0F8p6lhYoYfpTyyUmNDUejelU0TUMv6cntD65abdJd96jLpMi99v3ZZFQB9aCDTimD+2hj6VE1uB2jxdr2yo4+xgo+v9huWz3ZyNF19FgSIdWEfWT0CWLaERG1ZH8/ydUGYPrKfVAtyy7IHWzKCNs1/MFu1AQdZ/uyYXTKRh1mIJcDR8x1VEX9YyYFIHIXlwv9yjNCteU9OfK7SIxib+Vonryacdz3vIIDedx32NK/T+2q8ZUn2bshbcVB/moDU16j/QLtAyXmjq0BFXQZ8jMWwe9zbHmOa4gPHCDF0rA4P0Q4yBRDftugvRAlx2AhZ6z8+YQQjW9N6tikljxotVOUYfPtcFjI3OPm1qUqKHScR5fBSc/tUggkRX9NH7A/6PGH3t7mSF64VnWoNae8Dg5XOXKrloX1Yl8fnRvMvbrTMZaSu3kOyBVg9HH3fN0WBNjUYKVG5LMkEe3xD/E02RzRyu9iQtGJFKy2Eot7fjMgzGcOGgJUArfcNRluYCkgfXl9iIQh3uMKg=
