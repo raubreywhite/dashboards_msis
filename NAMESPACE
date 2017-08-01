@@ -2,5 +2,6 @@
 
 export(EmailNotificationOfNewData)
 export(MyNewFunction)
+export(MyNewFunction2)
 import(fhi)
 importFrom(stats,rnorm)
