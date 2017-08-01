@@ -17,6 +17,7 @@ Imports:
   lubridate,
   data.table,
   utils,
+  stats,
   fhi,
   RAWmisc
 Suggests: testthat
